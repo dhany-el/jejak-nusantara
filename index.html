@@ -95,8 +95,11 @@
   </div>
 
   <div class="header-actions">
+    <button type="button" class="icon-btn" id="devProfileBtn" title="Tentang Pengembang & Portofolio">
+      <span>👨‍💻</span> <span>Dev Profile</span>
+    </button>
     <button type="button" class="icon-btn" id="ambientToggleBtn" title="Aktifkan Suara Ambient Gamelan">
-      <span>🔇</span> <span>Ambient</span>
+      <span id="ambientBtnIcon">🔇</span> <span id="ambientBtnLabel">Ambient</span>
     </button>
     <button type="button" class="icon-btn" id="quizBtn" title="Mainkan Kuis Sejarah">
       <span>🏆</span> <span>Kuis</span>
@@ -702,7 +705,7 @@
 </section>
 
 <section class="era" id="era-10" data-yba="1293" data-year="ABAD KE-13 – 16 MASEHI" data-label="Majapahit" data-chapter="Babak II — Hindu-Buddha">
-  <div class="batik-divider" aria-hidden="true"><svg width="100%" height="100%" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#parangPattern)"/></svg></div>
+  <div class="batik-divider" aria-hidden="true"><svg width="100%" height="100%" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#kawungPattern)"/></svg></div>
   <div class="era__panel" style="--accent:#B8860B;--accent-tint:#F1E7CE;">
     <div class="era__frame">
       <svg class="era__svg" viewBox="0 0 280 200" role="img" aria-label="Gapura candi bentar Majapahit dengan kapal-kapal di kejauhan">
@@ -970,7 +973,7 @@
 </section>
 
 <section class="era era--reverse" id="era-14" data-yba="1613" data-year="ABAD KE-16 – 18 MASEHI" data-label="Mataram Islam" data-chapter="Babak III — Islam &amp; Kesultanan">
-  <div class="batik-divider" aria-hidden="true"><svg width="100%" height="100%" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#parangPattern)"/></svg></div>
+  <div class="batik-divider" aria-hidden="true"><svg width="100%" height="100%" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#kawungPattern)"/></svg></div>
   <div class="era__panel" style="--accent:#16342A;--accent-tint:#D5E3DC;">
     <div class="era__frame">
       <svg class="era__svg" viewBox="0 0 280 200" role="img" aria-label="Gapura keraton Mataram Islam dengan motif bulan dan matahari kalender Jawa">
@@ -1141,7 +1144,7 @@
 </section>
 
 <section class="era" id="era-18" data-yba="1873" data-year="ABAD KE-19" data-label="Perlawanan Rakyat" data-chapter="Babak IV — Kolonial">
-  <div class="batik-divider" aria-hidden="true"><svg width="100%" height="100%" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#parangPattern)"/></svg></div>
+  <div class="batik-divider" aria-hidden="true"><svg width="100%" height="100%" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#kawungPattern)"/></svg></div>
   <div class="era__panel" style="--accent:#5B4A3A;--accent-tint:#E5DDD0;">
     <div class="era__frame">
       <svg class="era__svg" viewBox="0 0 280 200" role="img" aria-label="Keris dan tombak perlawanan di depan benteng pertahanan rakyat">
@@ -1182,7 +1185,7 @@
 <p class="milestone">Rentang ini seusia satu generasi — dari kelahiran hingga menjadi orang tua.</p>
 
 <section class="era era--reverse" id="era-19" data-yba="1901" data-year="1901 – 1945" data-label="Politik Etis &amp; Jepang" data-chapter="Babak IV — Kolonial">
-  <div class="batik-divider" aria-hidden="true"><svg width="100%" height="100%" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#parangPattern)"/></svg></div>
+  <div class="batik-divider" aria-hidden="true"><svg width="100%" height="100%" preserveAspectRatio="none"><rect width="100%" height="100%" fill="url(#kawungPattern)"/></svg></div>
   <div class="era__panel" style="--accent:#856F52;--accent-tint:#EDE6DA;">
     <div class="era__frame">
       <svg class="era__svg" viewBox="0 0 280 200" role="img" aria-label="Buku dan pena pendidikan bersanding dengan bendera matahari masa pendudukan Jepang">
@@ -1879,6 +1882,43 @@
     <h2 class="modal-title" id="bookmarksTitle">Titik Sejarah Favoritmu</h2>
     <p class="modal-subtitle">Daftar peristiwa sejarah yang telah kamu simpan untuk dibaca kembali.</p>
     <div id="bookmarksModalBody"></div>
+  </div>
+</div>
+
+<!-- Developer Profile Modal -->
+<div class="modal-backdrop" id="devProfileModal" role="dialog" aria-modal="true" aria-labelledby="devTitle">
+  <div class="modal-card">
+    <button type="button" class="modal-close" id="devCloseBtn" aria-label="Tutup profil pengembang">✕</button>
+    <div class="dev-profile-header">
+      <div class="dev-avatar">👨‍💻</div>
+      <div class="dev-info">
+        <h3 id="devTitle">Dhany</h3>
+        <p>@dhany-el • Front-End Web Developer</p>
+      </div>
+    </div>
+    <p class="modal-subtitle">Pengembang aplikasi web <b>Jejak Nusantara</b>. Berpengalaman membangun aplikasi web interaktif, animasi UI/UX modern, sintesis suara Web Audio API, serta optimasi performa tinggi.</p>
+    
+    <div style="margin: 18px 0;">
+      <h4 style="font-size:0.85rem; font-family:var(--ff-mono); color:var(--accent-gold); margin-bottom:10px; text-transform:uppercase; letter-spacing:0.05em;">Keahlian & Teknologi Proyek Ini</h4>
+      <div class="dev-skills">
+        <span class="skill-tag">HTML5 Semantik</span>
+        <span class="skill-tag">Vanilla CSS Design System</span>
+        <span class="skill-tag">ES6+ JavaScript Architecture</span>
+        <span class="skill-tag">Web Audio API Synthesizer</span>
+        <span class="skill-tag">Vite Bundler</span>
+        <span class="skill-tag">Responsive & Accessibility (a11y)</span>
+        <span class="skill-tag">GitHub Actions CI/CD</span>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:24px;">
+      <a href="https://github.com/dhany-el/jejak-nusantara" target="_blank" rel="noopener noreferrer" class="era__info-btn" style="text-decoration:none;">
+        <span>⭐</span> Repositori GitHub
+      </a>
+      <a href="https://github.com/dhany-el" target="_blank" rel="noopener noreferrer" class="era__action-sub-btn" style="text-decoration:none;">
+        <span>👤</span> Profil GitHub @dhany-el
+      </a>
+    </div>
   </div>
 </div>
 

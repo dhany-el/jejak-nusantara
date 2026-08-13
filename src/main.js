@@ -231,7 +231,6 @@ import {
     const infoBtn = era.querySelector('.era__info-btn');
 
     if (body && infoBtn) {
-      // Create actions wrapper if not present
       let actions = era.querySelector('.era__actions');
       if (!actions) {
         actions = document.createElement('div');
@@ -267,18 +266,45 @@ import {
   });
 
   /* ---------- Header Control Buttons Binding ---------- */
+  // Developer Profile Modal Toggle
+  const devBtn = document.getElementById('devProfileBtn');
+  const devModal = document.getElementById('devProfileModal');
+  const devCloseBtn = document.getElementById('devCloseBtn');
+
+  if (devBtn && devModal) {
+    devBtn.addEventListener('click', () => {
+      devModal.classList.add('is-open');
+      playChime(523.25);
+    });
+  }
+  if (devCloseBtn && devModal) {
+    devCloseBtn.addEventListener('click', () => {
+      devModal.classList.remove('is-open');
+    });
+  }
+  if (devModal) {
+    devModal.addEventListener('click', (e) => {
+      if (e.target.id === 'devProfileModal') devModal.classList.remove('is-open');
+    });
+  }
+
   // Ambient Music Toggle
   const ambientBtn = document.getElementById('ambientToggleBtn');
+  const ambientIcon = document.getElementById('ambientBtnIcon');
+  const ambientLabel = document.getElementById('ambientBtnLabel');
+
   if (ambientBtn) {
     ambientBtn.addEventListener('click', () => {
       const playing = toggleAmbientSound();
       if (playing) {
         ambientBtn.classList.add('is-active');
-        ambientBtn.innerHTML = `<span>🎵</span> Suara Ambient: On`;
+        if (ambientIcon) ambientIcon.innerHTML = `<span class="eq-bars"><span class="eq-bar"></span><span class="eq-bar"></span><span class="eq-bar"></span></span>`;
+        if (ambientLabel) ambientLabel.textContent = 'Ambient: On';
         showToast('Suara Ambient dinyalakan 🎵');
       } else {
         ambientBtn.classList.remove('is-active');
-        ambientBtn.innerHTML = `<span>🔇</span> Suara Ambient: Off`;
+        if (ambientIcon) ambientIcon.textContent = '🔇';
+        if (ambientLabel) ambientLabel.textContent = 'Ambient';
         showToast('Suara Ambient dimatikan');
       }
     });

@@ -1,5 +1,6 @@
 // Interactive Trivia Quiz for Jejak Nusantara
 import { playChime } from './audio.js';
+import { showToast } from './search.js';
 
 const QUIZ_QUESTIONS = [
   {
@@ -45,21 +46,31 @@ const QUIZ_QUESTIONS = [
     explanation: "Fatmawati, istri Soekarno, menjahit langsung Bendera Pusaka Merah Putih sebelum pembacaan Proklamasi."
   },
   {
-    question: "Peristiwa penerbangan dan penentuan nasib sendiri rakyat Timor Timur lewat referendum berlangsung pada tahun...",
+    question: "Peristiwa penentuan nasib sendiri rakyat Timor Timur lewat referendum berlangsung pada tahun...",
     options: ["1999", "1998", "2002", "1975"],
     answer: 0,
     explanation: "Referendum Timor Timur diselenggarakan pada 30 Agustus 1999 di bawah pengawasan PBB."
+  },
+  {
+    question: "Kerajaan maritim besar di Sumatra yang menjadi pusat pembelajaran agama Buddha di Asia Tenggara pada abad ke-7 hingga 13 M adalah...",
+    options: ["Sriwijaya", "Samudra Pasai", "Tarumanegara", "Kalingga"],
+    answer: 0,
+    explanation: "Kerajaan Sriwijaya berpusat di Palembang dan mengendalikan jalur dagang Selat Malaka serta menjadi pusat studi Buddha."
+  },
+  {
+    question: "Ibu kota baru Indonesia yang dibangun dengan konsep 'forest city' di Kalimantan Timur bernama...",
+    options: ["Nusantara (IKN)", "Jayakarta", "Kutai Kertanegara", "Sriwijaya City"],
+    answer: 0,
+    explanation: "Ibu Kota Nusantara (IKN) dibangun di Penajam Paser Utara dan Kutai Kartanegara, Kalimantan Timur."
   }
 ];
 
 let currentQuestionIndex = 0;
 let score = 0;
-let userAnswers = [];
 
 export function openQuizModal() {
   currentQuestionIndex = 0;
   score = 0;
-  userAnswers = [];
   
   const backdrop = document.getElementById('quizModal');
   if (backdrop) {
@@ -81,30 +92,47 @@ function renderQuestion() {
 
   if (currentQuestionIndex >= QUIZ_QUESTIONS.length) {
     // Show Results
+    const finalScorePct = Math.round((score / QUIZ_QUESTIONS.length) * 100);
     bodyEl.innerHTML = `
       <div style="text-align:center; padding: 10px 0;">
-        <div style="font-size:3rem; margin-bottom:10px;">🏆</div>
+        <div style="font-size:3.5rem; margin-bottom:10px;">🏆</div>
         <h3 style="font-family:var(--ff-display); font-size:1.8rem; margin-bottom:8px;">Kuis Selesai!</h3>
-        <p style="font-size:1.1rem; color:var(--accent-gold); margin-bottom:20px;">Skor Kamu: <b>${score} / ${QUIZ_QUESTIONS.length}</b> (${Math.round((score/QUIZ_QUESTIONS.length)*100)}%)</p>
+        <p style="font-size:1.2rem; color:var(--accent-gold); margin-bottom:16px;">Skor Kamu: <b>${score} / ${QUIZ_QUESTIONS.length}</b> (${finalScorePct}%)</p>
         <p style="line-height:1.6; opacity:0.85; margin-bottom:24px;">${
-          score === QUIZ_QUESTIONS.length ? 'Luar biasa! Kamu adalah ahli sejarah Nusantara sejati!' :
-          score >= 5 ? 'Bagus sekali! Pemahaman sejarah kamu sangat kuat.' :
-          'Terus jelajahi linimasa Jejak Nusantara untuk memperdalam wawasanmu!'
+          score === QUIZ_QUESTIONS.length ? '🌟 Luar biasa! Kamu adalah ahli sejarah Nusantara sejati!' :
+          score >= 7 ? '👏 Bagus sekali! Pemahaman sejarah Indonesia kamu sangat luas.' :
+          '💡 Terus jelajahi linimasa Jejak Nusantara untuk memperdalam wawasanmu!'
         }</p>
-        <button id="restartQuizBtn" class="footer__top-btn" type="button">Coba Lagi ↺</button>
+        <div style="display:flex; justify-content:center; gap:12px;">
+          <button id="shareScoreBtn" class="era__action-sub-btn" type="button">📋 Bagikan Skor</button>
+          <button id="restartQuizBtn" class="footer__top-btn" type="button">Coba Lagi ↺</button>
+        </div>
       </div>
     `;
+
     document.getElementById('restartQuizBtn')?.addEventListener('click', openQuizModal);
+    document.getElementById('shareScoreBtn')?.addEventListener('click', () => {
+      const shareText = `Saya berhasil meraih skor ${score}/${QUIZ_QUESTIONS.length} (${finalScorePct}%) dalam Kuis Sejarah Jejak Nusantara! 🇮🇩✨ Coba sendiri di: ${window.location.href}`;
+      navigator.clipboard.writeText(shareText).then(() => {
+        showToast('Hasil kuis berhasil disalin!');
+        playChime(783.99);
+      });
+    });
     return;
   }
 
   const q = QUIZ_QUESTIONS[currentQuestionIndex];
+  const progressPct = ((currentQuestionIndex) / QUIZ_QUESTIONS.length) * 100;
+
   bodyEl.innerHTML = `
+    <div style="width:100%; height:4px; background:rgba(255,255,255,0.1); border-radius:2px; margin-bottom:16px; overflow:hidden;">
+      <div style="width:${progressPct}%; height:100%; background:var(--accent-gold); transition:width 0.3s ease;"></div>
+    </div>
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; font-family:var(--ff-mono); font-size:12px; color:var(--accent-gold);">
       <span>SOAL ${currentQuestionIndex + 1} DARI ${QUIZ_QUESTIONS.length}</span>
       <span>Skor: ${score}</span>
     </div>
-    <h3 style="font-family:var(--ff-display); font-size:1.25rem; line-height:1.4; margin-bottom:18px;">${q.question}</h3>
+    <h3 style="font-family:var(--ff-display); font-size:1.2rem; line-height:1.4; margin-bottom:18px;">${q.question}</h3>
     <div class="quiz-options">
       ${q.options.map((opt, i) => `
         <button class="quiz-opt-btn" data-index="${i}">${opt}</button>
@@ -115,7 +143,7 @@ function renderQuestion() {
 
   const optBtns = bodyEl.querySelectorAll('.quiz-opt-btn');
   optBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', () => {
       const idx = parseInt(btn.dataset.index);
       handleAnswer(idx, q, optBtns, bodyEl);
     });

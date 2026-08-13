@@ -3,9 +3,9 @@
   --ink-soft: #4A3D2E;
   --cream: #F7F1E4;
   --cream-dim: #EFE4CB;
-  --glass-bg: rgba(25, 18, 12, 0.75);
+  --glass-bg: rgba(25, 18, 12, 0.78);
   --glass-light: rgba(250, 245, 235, 0.88);
-  --glass-border: rgba(247, 241, 228, 0.2);
+  --glass-border: rgba(247, 241, 228, 0.22);
   --accent: #8B5E34;
   --accent-gold: #D4AF37;
   --accent-tint: #EFE2D2;
@@ -148,11 +148,11 @@ button {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: min(92vw, 980px);
+  width: min(94vw, 1020px);
   padding: 8px 14px;
-  background: rgba(15, 10, 6, 0.78);
-  backdrop-filter: blur(18px) saturate(1.4);
-  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  background: rgba(15, 10, 6, 0.82);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
   border: 1px solid var(--glass-border);
   border-radius: 999px;
   box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.7);
@@ -250,7 +250,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 7px 12px;
+  padding: 7px 13px;
   border-radius: 999px;
   background: rgba(247, 241, 228, 0.1);
   border: 1px solid rgba(247, 241, 228, 0.15);
@@ -280,6 +280,24 @@ button {
   outline-offset: 2px;
 }
 
+/* Audio Equalizer Animation */
+.eq-bars {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 12px;
+}
+.eq-bar {
+  width: 2px;
+  height: 100%;
+  background: var(--accent-gold);
+  border-radius: 1px;
+  animation: eqBounce 0.8s ease-in-out infinite alternate;
+}
+.eq-bar:nth-child(2) { animation-delay: 0.2s; }
+.eq-bar:nth-child(3) { animation-delay: 0.4s; }
+@keyframes eqBounce { 0% { height: 3px; } 100% { height: 12px; } }
+
 /* Badge counters */
 .badge-count {
   display: inline-flex;
@@ -299,13 +317,13 @@ button {
 /* ---------- HUD (Right floating dial) ---------- */
 .hud {
   position: fixed;
-  top: 76px;
+  top: 78px;
   right: 20px;
   z-index: 60;
   display: flex;
   align-items: center;
   gap: 13px;
-  background: rgba(15, 10, 6, 0.55);
+  background: rgba(15, 10, 6, 0.65);
   backdrop-filter: blur(14px) saturate(1.3);
   -webkit-backdrop-filter: blur(14px) saturate(1.3);
   border: 1px solid rgba(247, 241, 228, 0.2);
@@ -456,12 +474,12 @@ button {
   justify-content: center;
   gap: 8px;
   flex-wrap: wrap;
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto 30px;
   padding: 0 16px;
 }
 .chapter-chip {
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 999px;
   background: rgba(247, 241, 228, 0.08);
   border: 1px solid rgba(247, 241, 228, 0.15);
@@ -494,7 +512,7 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 100px 24px 40px;
+  padding: 110px 24px 40px;
   color: var(--cream);
   position: relative;
 }
@@ -652,10 +670,10 @@ button {
 .era__panel {
   max-width: 1120px;
   width: 100%;
-  background: rgba(15, 10, 6, 0.25);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 10, 6, 0.28);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-xl);
   padding: 36px 32px;
   display: flex;
@@ -750,7 +768,7 @@ button {
 }
 .era__text p + p { margin-top: 12px; }
 
-/* Card Action Toolbar (Facts, Bookmark, Share) */
+/* Card Action Toolbar (Facts, Bookmark, Share, Navigation) */
 .era__actions {
   display: flex;
   align-items: center;
@@ -910,12 +928,13 @@ button {
 .mobile-nav__track { flex: 1; height: 4px; background: rgba(247, 241, 228, 0.22); border-radius: 2px; overflow: hidden; }
 .mobile-nav__fill { height: 100%; width: 0%; background: var(--accent-gold); }
 
-/* ---------- Modals (Quiz & Bookmarks) ---------- */
+/* ---------- Modals (Quiz, Bookmarks & Developer Profile) ---------- */
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   z-index: 250;
   display: flex;
   align-items: center;
@@ -937,7 +956,7 @@ button {
   border-radius: var(--radius-xl);
   max-width: 580px;
   width: 100%;
-  max-height: 85vh;
+  max-height: 88vh;
   overflow-y: auto;
   padding: 32px;
   color: var(--cream);
@@ -983,6 +1002,56 @@ button {
   opacity: 0.85;
   margin-bottom: 24px;
   line-height: 1.5;
+}
+
+/* Developer Profile Badge & Card Modal Styling */
+.dev-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.dev-avatar {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.4);
+}
+
+.dev-info h3 {
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+
+.dev-info p {
+  font-family: var(--ff-mono);
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+}
+
+.dev-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.skill-tag {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(247, 241, 228, 0.1);
+  border: 1px solid rgba(247, 241, 228, 0.18);
+  color: var(--cream);
 }
 
 /* Quiz Specific Styles */
@@ -1035,7 +1104,7 @@ button {
 }
 
 .toast-item {
-  background: rgba(15, 10, 6, 0.9);
+  background: rgba(15, 10, 6, 0.92);
   backdrop-filter: blur(12px);
   border: 1px solid var(--accent-gold);
   color: var(--cream);
