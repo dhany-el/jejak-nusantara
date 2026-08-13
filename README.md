@@ -1,168 +1,165 @@
 <div align="center">
 
-  # 🇮🇩 Jejak Nusantara
-  ### *Linimasa Interaktif Perjalanan Sejarah Indonesia*
+  # 🇮🇩 JEJAK NUSANTARA
+  ### *Interactive Historical Timeline & Cultural Web Experience*
 
-  [![HTML5](https://img.shields.io/badge/HTML5-Semantic_Pure-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-  [![CSS3](https://img.shields.io/badge/CSS3-Vanilla_Design_System-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  [![HTML5](https://img.shields.io/badge/HTML5-Pure_Semantic-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  [![CSS3](https://img.shields.io/badge/CSS3-Glassmorphism_Design-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
   [![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla_ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-  [![SVG](https://img.shields.io/badge/SVG-Vector_Illustrations-FFB300?style=for-the-badge&logo=svg&logoColor=white)](https://www.w3.org/TR/SVG2/)
-  [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Active_Deployment-222222?style=for-the-badge&logo=githubpages&logoColor=white)](https://dhany-el.github.io/jejak-nusantara/)
+  [![SVG Artwork](https://img.shields.io/badge/SVG-Vector_Artwork-FFB300?style=for-the-badge&logo=svg&logoColor=white)](https://www.w3.org/TR/SVG2/)
+  [![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Live_App-222222?style=for-the-badge&logo=githubpages&logoColor=white)](https://dhany-el.github.io/jejak-nusantara/)
+
+  <br />
 
   <p align="center">
-    <b>Sebuah aplikasi web linimasa interaktif mandiri yang menyusuri ±2 juta tahun perjalanan sejarah Indonesia — dari manusia purba Sangiran hingga Pemindahan Ibu Kota Nusantara (IKN).</b>
+    <b>Menyusuri ±2 Juta Tahun Perjalanan Sejarah &amp; Peradaban Indonesia</b><br />
+    <i>Dari Fosil Manusia Purba Sangiran hingga Pembangunan Ibu Kota Nusantara (IKN)</i>
   </p>
 
-  [🌐 Akses Live Web](https://dhany-el.github.io/jejak-nusantara/) •
-  [📜 Struktur Babak Sejarah](#-struktur-babak-sejarah) •
-  [✨ Fitur &amp; Interaktivitas](#-fitur--interaktivitas-aplikasi) •
-  [🛠️ Arsitektur Kode](#%EF%B8%8F-arsitektur-proyek)
+  <br />
+
+  [🌐 Buka Live Application](https://dhany-el.github.io/jejak-nusantara/) •
+  [🗺️ Peta Linimasa Sejarah](#%EF%B8%8F-peta-visual-linimasa-sejarah) •
+  [📚 Indeks 6 Babak](#-indeks-kronologi-6-babak) •
+  [✨ Visual &amp; Fitur Canggih](#-fitur-visual--teknologi-canggih)
+
+  <br />
 
 </div>
 
 ---
 
-## 📖 Tentang Proyek
-
-**Jejak Nusantara** adalah aplikasi web *Single-Page Application* (SPA) linimasa interaktif yang dirancang tanpa ketergantungan *library* atau *framework* luar. Seluruh gaya visual, efek animasi, ilustrasi vektor SVG, serta logika interaktivitas dikemas secara bersih dalam satu berkas mandiri.
-
-Aplikasi ini menyajikan **38 titik sejarah** yang terbagi dalam **6 babak besar**, memungkinkan pengunjung menjelajahi kronologi sejarah peradaban Nusantara secara visual, edukatif, dan responsif dari masa prasejarah hingga era modern.
+> [!NOTE]
+> **Showcase Portofolio Web Development**: *Jejak Nusantara* dibangun secara murni (*Zero Dependency / Pure Vanilla Web*) tanpa menggunakan *framework* atau *library* luar. Seluruh visualisasi, ilustrasi vektor SVG, kalkulasi linimasa logaritmik, dan tata letak responsif dikemas mandiri dalam performa terbaik.
 
 ---
 
-## 📜 Struktur Babak Sejarah
+## 🗺️ Peta Visual Linimasa Sejarah
 
-Linimasa ini mencakup **6 Babak Utama** dan **38 Titik Sejarah**:
-
-### 🏛️ Babak I — Prasejarah
-1. **±2.000.000 – 300.000 Tahun Lalu**: Meganthropus & Pithecanthropus (*Sangiran & Trinil*)
-2. **±100.000 – 50.000 Tahun Lalu**: Homo Floresiensis — *"Manusia Liang Bua"*
-3. **±2000 – 500 SM**: Migrasi Bangsa Austronesia
-4. **Zaman Paleolitikum & Mesolitikum**: Budaya Berburu-Meramu & Seni Gua
-5. **Zaman Neolitikum & Megalitikum**: Revolusi Bercocok Tanam & Punden Berundak
-
-### 🕉️ Babak II — Zaman Hindu-Buddha
-6. **Abad ke-4 M**: Kerajaan Kutai Martapura & Prasasti Yupa
-7. **Abad ke-5 M**: Kerajaan Tarumanegara & Purnawarman
-8. **Abad ke-7 M**: Kerajaan Kalingga & Ratu Shima
-9. **Abad ke-7 – 13 M**: Kerajaan Sriwijaya (*Kemaharajaan Maritim & Pusat Buddha*)
-10. **Abad ke-8 – 10 M**: Mataram Kuno (*Kemegahan Borobudur & Prambanan*)
-11. **Abad ke-11 – 13 M**: Kerajaan Kediri & Sastra Jawa Kuno
-12. **Abad ke-13 M**: Kerajaan Singhasari & Ken Arok
-13. **Abad ke-13 – 16 M**: Kerajaan Majapahit & Sumpah Palapa Gajah Mada
-
-### 🌙 Babak III — Islam & Kesultanan
-14. **Abad ke-7 – 13 M**: Masuk & Menyebarnya Ajaran Islam
-15. **Abad ke-14 – 17 M**: Kerajaan Bali Gelgel (*Pelestari Warisan Hindu-Jawa*)
-16. **Abad ke-15 – 16 M**: Kesultanan Demak & Peran Wali Songo
-17. **Abad ke-16 M**: Kesultanan Banjar & Tradisi Sungai
-18. **Abad ke-16 – 17 M**: Kesultanan Aceh Darussalam & Sultan Iskandar Muda
-19. **Abad ke-16 – 18 M**: Kesultanan Mataram Islam & Kalender Jawa
-20. **Abad ke-16 – 17 M**: Kesultanan Gowa-Tallo & Ternate-Tidore (*Jalur Rempah*)
-
-### 🏰 Babak IV — Zaman Kolonial
-21. **1509 – 1799**: Kedatangan Bangsa Eropa & Monopoli VOC
-22. **1800 – 1900**: Hindia Belanda & Sistem Tanam Paksa (*Cultuurstelsel*)
-23. **Abad ke-19**: Perlawanan Rakyat Nusantara (*Diponegoro, Padri, Pattimura, Aceh*)
-24. **1901 – 1945**: Politik Etis & Masa Pendudukan Jepang
-
-### 🇮🇩 Babak V — Pergerakan & Kemerdekaan
-25. **1908 – 1920-an**: Era Kebangkitan Nasional (*Budi Utomo & Sarekat Islam*)
-26. **28 Oktober 1928**: Sumpah Pemuda & Lahirnya Identitas Indonesia
-27. **22 Desember 1928**: Kongres Perempuan Indonesia & Pergerakan Wanita
-28. **17 Agustus 1945**: Proklamasi Kemerdekaan Republik Indonesia
-29. **1945 – 1949**: Perjuangan Revolusi Fisik & Diplomasi Kemerdekaan
-
-### 🕊️ Babak VI — Indonesia Merdeka
-30. **1945 – 1966**: Era Orde Lama & Konferensi Asia-Afrika
-31. **1963 – 1966**: Masa Konfrontasi Indonesia-Malaysia
-32. **1966 – 1998**: Era Orde Baru & Pembangunan Ekonomi
-33. **1998 – 2000-an**: Era Reformasi & Demokrasi Multipartai
-34. **1975 – 1999**: Integrasi & Referendum Timor Timur
-35. **2002**: Tragedi Bom Bali & Penguatan Kontraterorisme
-36. **2020 – 2022**: Penanganan Pandemi COVID-19 di Indonesia
-37. **2019 – Sekarang**: Pemindahan Ibu Kota Nusantara (IKN)
-38. **Masa Kini**: Indonesia Hari Ini (*Demokrasi & Ekonomi Digital*)
+```
+┌─────────────────────────────────────────────────────────────────────────────────────────┐
+│                                  JEJAK NUSANTARA                                        │
+│                 ±2.000.000 Tahun Lalu ──► Abad ke-4 M ──► Masa Kini (2026)               │
+└─────────────────────────────────────────────────────────────────────────────────────────┘
+       │
+       ├── 🏛️ BABAK I: PRASEJARAH (±2.000.000 SM – 500 SM)
+       │    ├── 01. Meganthropus & Pithecanthropus Soloensis
+       │    ├── 02. Homo Floresiensis ("Manusia Liang Bua")
+       │    ├── 03. Gelombang Migrasi Bangsa Austronesia
+       │    ├── 04. Zaman Berburu-Meramu & Lukisan Cadas Maros
+       │    └── 05. Revolusi Neolitikum & Punden Berundak
+       │
+       ├── 🕉️ BABAK II: ZAMAN HINDU-BUDDHA (Abad 4 M – 16 M)
+       │    ├── 06. Kerajaan Kutai Martapura (Prasasti Yupa)
+       │    ├── 07. Kerajaan Tarumanegara & Purnawarman
+       │    ├── ✦. Kerajaan Kalingga & Ratu Shima
+       │    ├── 08. Kemaharajaan Maritim Sriwijaya
+       │    ├── 09. Mataram Kuno (Borobudur & Prambanan)
+       │    ├── ✦. Kerajaan Kediri & Sastra Jawa Kuno
+       │    ├── ✦. Kerajaan Singhasari & Ken Arok
+       │    └── 10. Kerajaan Majapahit & Sumpah Palapa
+       │
+       ├── 🌙 BABAK III: ISLAM & KESULTANAN (Abad 7 M – 18 M)
+       │    ├── 11. Penyebaran Islam & Peran Wali Songo
+       │    ├── ✦. Kerajaan Bali Gelgel (Pelestari Budaya)
+       │    ├── 12. Kesultanan Demak & Fatahillah
+       │    ├── ✦. Kesultanan Banjar & Tradisi Sungai
+       │    ├── 13. Kesultanan Aceh Darussalam & Utsmaniyah
+       │    ├── 14. Kesultanan Mataram Islam & Kalender Jawa
+       │    └── 15. Gowa-Tallo & Ternate-Tidore (Jalur Rempah)
+       │
+       ├── 🏰 BABAK IV: ZAMAN KOLONIAL (1509 – 1945)
+       │    ├── 16. Kedatangan Bangsa Eropa & Monopoli VOC
+       │    ├── 17. Hindia Belanda & Sistem Tanam Paksa
+       │    ├── 18. Perlawanan Rakyat (Diponegoro, Padri, Pattimura)
+       │    └── 19. Politik Etis & Pendudukan Jepang
+       │
+       ├── 🇮🇩 BABAK V: PERGERAKAN & KEMERDEKAAN (1908 – 1949)
+       │    ├── 20. Era Kebangkitan Nasional (Budi Utomo)
+       │    ├── 21. Ikrar Sumpah Pemuda (28 Oktober 1928)
+       │    ├── ✦. Kongres Perempuan Indonesia (22 Des 1928)
+       │    ├── 22. Proklamasi Kemerdekaan 17 Agustus 1945
+       │    └── 23. Perjuangan Revolusi Fisik & Diplomasi
+       │
+       └── 🕊️ BABAK VI: INDONESIA MERDEKA (1945 – Masa Kini)
+            ├── 24. Era Orde Lama & Konferensi Asia-Afrika
+            ├── ✦. Konfrontasi Indonesia-Malaysia
+            ├── 25. Era Orde Baru & Pembangunan Ekonomi
+            ├── 26. Era Reformasi & Demokrasi Multipartai
+            ├── ✦. Integrasi & Referendum Timor Timur
+            ├── ✦. Tragedi Bom Bali & Kontraterorisme
+            ├── ✦. Penanganan Pandemi COVID-19
+            ├── ✦. Pemindahan Ibu Kota Nusantara (IKN)
+            └── 27. Indonesia Hari Ini (Demokrasi & Digital)
+```
 
 ---
 
-## ✨ Fitur & Interaktivitas Aplikasi
+## 📚 Indeks Kronologi 6 Babak
 
-### 🧭 Head-Up Display (HUD) & Logarithmic Year Gauge
-- **Pengukur Progres Melingkar (SVG Gauge)**: Melacak posisi pengguliran pengguna secara real-time.
-- **Interpolasi Tahun Logaritmik**: Menghitung estimasi tahun secara kontinu dari ±2.000.000 SM hingga masa kini saat pengguna menggeser linimasa.
+| Babak | Periode Waktu | Jumlah Titik | Kejadian & Tokoh Kunci | Deep Link |
+| :--- | :--- | :---: | :--- | :---: |
+| **Babak I — Prasejarah** | ±2.000.000 SM – 500 SM | 5 Titik | Sangiran, Homo Floresiensis, Austronesia, Lukisan Gua Maros | [`#era-1`](https://dhany-el.github.io/jejak-nusantara/#era-1) |
+| **Babak II — Hindu-Buddha** | Abad ke-4 M – 16 M | 8 Titik | Kutai, Tarumanegara, Kalingga, Sriwijaya, Borobudur, Majapahit | [`#era-6`](https://dhany-el.github.io/jejak-nusantara/#era-6) |
+| **Babak III — Islam & Kesultanan** | Abad ke-7 M – 18 M | 7 Titik | Wali Songo, Demak, Aceh Darussalam, Mataram Islam, Gowa-Tallo | [`#era-11`](https://dhany-el.github.io/jejak-nusantara/#era-11) |
+| **Babak IV — Zaman Kolonial** | 1509 – 1945 | 4 Titik | Monopoli VOC, Tanam Paksa, Perang Diponegoro, Pendudukan Jepang | [`#era-16`](https://dhany-el.github.io/jejak-nusantara/#era-16) |
+| **Babak V — Pergerakan & Kemerdekaan** | 1908 – 1949 | 5 Titik | Budi Utomo, Sumpah Pemuda, Proklamasi 1945, Revolusi Fisik | [`#era-20`](https://dhany-el.github.io/jejak-nusantara/#era-20) |
+| **Babak VI — Indonesia Merdeka** | 1945 – Masa Kini | 9 Titik | KAA 1955, Orde Baru, Reformasi 1998, Pandemi, IKN Nusantara | [`#era-24`](https://dhany-el.github.io/jejak-nusantara/#era-24) |
 
-### 📍 Side Timeline Navigasi & Mobile Bottom Bar
-- **Titik Navigasi Dinamis**: Navigasi titik melayang di sebelah kiri yang dikelompokkan secara rapi berdasarkan babak.
-- **Rel Layar Ponsel**: Bar navigasi khusus pada tampilan seluler yang menampilkan judul babak aktif dan meteran bacaan.
+---
 
-### 🖼️ Frame Ilustrasi Vektor 3D Parallax & Tilt
-- Bingkai ilustrasi SVG dengan sudut melengkung (*arch frame*) yang merespons gerak kursor mouse pengguna secara interaktif dengan efek kemiringan 3D (*tilt*).
+## ✨ Fitur Visual & Teknologi Canggih
 
-### ✦ Fakta Menarik Accordion
-- Tombol informasi interaktif pada setiap titik sejarah untuk membuka dan menutup daftar fakta-fakta historis mendalam secara *expand-in-place*.
+> [!TIP]
+> **Interaktivitas Tanpa Framework**: Aplikasi ini memanfaatkan API peramban asli (*Native Web API*) seperti `IntersectionObserver`, `requestAnimationFrame`, `window.matchMedia`, dan kalkulasi Matematika logaritmik secara langsung.
 
-### 🎨 Elemen Kebudayaan & Aksesibilitas
-- **Pola Pembatas Batik SVG**: Bermotif vektor *Kawung* dan *Parang* yang memisahkan tiap babak sejarah.
-- **Efek Ambient Particles**: Animasi partikel debu emas yang mengapung lembut di latar belakang.
-- **Aksesibilitas (a11y)**: Mendukung `prefers-reduced-motion`, navigasi keyboard, `aria-live` untuk pembaca layar, dan tombol *skip-link*.
+### ⏱️ 1. HUD Dial Meter & Logarithmic Year Interpolation
+* **Circular Progress Gauge**: Meteran SVG melingkar yang melacak persentase pengguliran halaman secara presisi.
+* **Continuous Year Reader**: Algoritma kalkulasi logaritmik ($y = f(x)$) yang mengestimasi tahun secara kontinu dari 2.000.000 SM hingga masa kini saat halaman digulir.
+
+### 🖼️ 2. 3D Parallax & Frame Tilt Interaction
+* **3D Perspective Tilt**: Efek kemiringan bingkai ilustrasi SVG yang merespons posisi kursor mouse secara interaktif.
+* **Smooth Animation Layering**: Kombinasi `perspective(700px)`, `rotateX()`, dan `rotateY()` dengan transisi *spring-cubic-bezier*.
+
+### 🎨 3. Inline Vector SVG Art & Batik Pattern System
+* **Motif Batik Vektor**: Pembatas babak bermotif khas Indonesia (*Batik Kawung* & *Batik Parang*) menggunakan SVG `<pattern>`.
+* **Ambient Floating Particles**: Efek partikel emas yang melayang lembut dengan CSS `@keyframes drift`.
+
+### ✦ 4. Interactive Accordion ("Fakta Menarik")
+* **Expand-in-Place Fact List**: Setiap titik sejarah dilengkapi panel accordion interaktif yang membuka fakta-fakta historis mendalam tanpa mengganggu alur linimasa.
 
 ---
 
 ## 🛠️ Arsitektur Proyek
 
-Aplikasi ini dibangun menggunakan arsitektur web murni (*Vanilla Web Architecture*):
-
 ```
 jejak-nusantara/
-├── index.html              # Berkas Mandiri (HTML5 + CSS3 + Embedded SVG + ES6 JS)
-├── package.json            # Konfigurasi Proyek & Dep
-├── vite.config.js          # Konfigurasi Pengembang & Preview
-├── README.md               # Dokumentasi Resmi Proyek
-└── dist/                   # Hasil Build Siap Penayangan
+├── index.html              # Berkas Utama Mandiri (HTML5 + CSS3 + Inline SVG + ES6 JS)
+├── package.json            # NPM & Script Config
+├── vite.config.js          # Pengaturan Server & Preview
+├── README.md               # Dokumentasi Visual Portofolio
+└── dist/                   # Production Build
     └── index.html
 ```
 
-| Komponen | Teknologi | Keterangan |
-| :--- | :--- | :--- |
-| **Struktur** | HTML5 Semantik | Tag semantik modern (`header`, `main`, `section`, `footer`, `nav`) |
-| **Gaya Visual** | Vanilla CSS3 | variabel CSS (`:root`), Grid, Flexbox, Glassmorphism, Gradient |
-| **Grafis Vektor** | Inline SVG & Defs | Ilustrasi kustom, motif Batik Kawung/Parang, dan Filter Glow |
-| **Logika & DOM** | Vanilla JavaScript | `IntersectionObserver`, `requestAnimationFrame`, `matchMedia` |
-| **Penayangan** | GitHub Pages | Di-publish otomatis melalui branch `gh-pages` |
+---
+
+## 👨‍💻 Profil Pengembang
+
+<div align="center">
+
+  ### **Dhany (`@dhany-el`)**
+  *Front-End Web Developer*
+
+  [![GitHub Profile](https://img.shields.io/badge/GitHub-dhany--el-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/dhany-el)
+  [![Portfolio App](https://img.shields.io/badge/Live_App-Jejak_Nusantara-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://dhany-el.github.io/jejak-nusantara/)
+
+  *Dibuat dengan rasa bangga untuk memperkenalkan kekayaan sejarah dan kebudayaan Indonesia melalui karya aplikasi web modern.*
+
+</div>
 
 ---
 
-## 🚀 Jalankan di Lokal
-
-### Prasyarat
-- **Node.js** (v18+) & NPM
-
-### Langkah-Langkah:
-1. **Clone Repositori**:
-   ```bash
-   git clone https://github.com/dhany-el/jejak-nusantara.git
-   cd jejak-nusantara
-   ```
-
-2. **Jalankan Server Lokal**:
-   ```bash
-   npm run dev
-   ```
-   Aplikasi akan berjalan di `http://localhost:3000/`.
-
-3. **Build untuk Produksi**:
-   ```bash
-   npm run build
-   ```
-
----
-
-## 👤 Pengembang
-
-Dibuat dengan dedikasi sebagai karya portofolio web interaktif sejarah Indonesia.
-
-- **Pengembang**: [Dhany (`@dhany-el`)](https://github.com/dhany-el)
-- **Repositori**: [https://github.com/dhany-el/jejak-nusantara](https://github.com/dhany-el/jejak-nusantara)
-- **Live Demo**: [https://dhany-el.github.io/jejak-nusantara/](https://dhany-el.github.io/jejak-nusantara/)
-- **Lisensi**: MIT License
+<div align="center">
+  <sub>Lisensi MIT © 2026 Dhany (@dhany-el). Hak Cipta Dilindungi.</sub>
+</div>
