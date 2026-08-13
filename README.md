@@ -1,5 +1,9 @@
 <div align="center">
 
+  <img src="banner.jpg" alt="Jejak Nusantara Hero Banner" width="100%" style="border-radius: 16px;" />
+
+  <br /><br />
+
   # 🇮🇩 JEJAK NUSANTARA
   ### *Interactive Historical Timeline & Cultural Web Experience*
 
@@ -135,6 +139,7 @@
 ```
 jejak-nusantara/
 ├── index.html              # Berkas Utama Mandiri (HTML5 + CSS3 + Inline SVG + ES6 JS)
+├── banner.jpg              # Hero Graphic Visual Banner untuk GitHub Repository
 ├── package.json            # NPM & Script Config
 ├── vite.config.js          # Pengaturan Server & Preview
 ├── README.md               # Dokumentasi Visual Portofolio
